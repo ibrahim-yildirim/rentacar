@@ -1,27 +1,43 @@
-# Rentacar
+# Kodlama.io
+## _Angular_
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+Angular Projesi
 
-## Development server
+- ✨Angular ✨
+-  HTML 
+-  CSS
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features (PROJEDE NELER KULLANDIN)
 
-## Code scaffolding
+- Import a HTML file and watch it magically convert to Markdown
+- Drag and drop images (requires your Dropbox account be linked)
+- Import and save files from GitHub, Dropbox, Google Drive and One Drive
+- Drag and drop markdown and HTML files into Dillinger
+- Export documents as Markdown, HTML and PDF
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Markdown is a lightweight markup language based on the formatting conventions
+that people naturally use in email.
+As [John Gruber] writes on the [Markdown site][df1]
 
-## Build
+> Ekleme, silme ve güncelleme işlemleri yapıldı
+> Login ve admin login girişleri ve yetkileri yapıldı
+> Api'den veriler çekildi
+> Arabalar listelendi
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+This text you see here is *actually- written in Markdown! To get a feel
+for Markdown's syntax, type some text into the left window and
+watch the results in the right.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Installation
 
-## Running end-to-end tests
+Rent a car project requires [Node.js](https://nodejs.org/) v13+ to run.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Install the dependencies and devDependencies and start the server.
 
-## Further help
+```sh
+cd dosyanınAdı (yükledikten sonra ne yapması gerekiyor kısmı)
+npm i
+ng serve --open
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

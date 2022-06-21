@@ -1,0 +1,43 @@
+#deletebtn{
+    background-color: black;
+    border-color: black;
+    width: 100px;
+    margin-left: 2px;
+}
+
+#deletebtn:hover{
+    background-color: rgb(190, 9, 9);
+}
+
+#rentbtn{
+    background-color: black;
+    border-color: black;
+    color: white;
+    margin-bottom: 5px;
+    margin-left: 25px;
+    width: 202px;
+
+}
+
+#rentbtn:hover{
+    background-color: rgb(15, 145, 15);
+}
+
+
+#carCard:hover{
+    border-width: 3px;
+    border-color: black;
+    box-shadow: 5px 10px black;
+}
+
+#updatebtn{
+    background-color:black;
+    color: white;
+    border-color: black;
+    width: 100px;
+    margin-left: 13px;
+}
+
+#updatebtn:hover{
+    background-color: rgb(104, 178, 212);
+}

@@ -1,0 +1,13 @@
+<h3 style="margin-top:25px;">Add New Brand</h3>
+
+<form [formGroup]="brandAddForm" (ngSubmit)="add()" >
+    <div class="form-group">
+        <input type="text" id="name" formControlName="name" class="form-control" placeholder="enter brand name">
+        <div class="alert alert-danger" > Brand name required.</div>
+    </div>
+        <div class="form-group">
+        <input type="text" id="logo" formControlName="description" class="form-control" placeholder="enter brand logo url">
+        <div class="alert alert-danger" > Brand logo required.</div>
+    </div>
+    <button type="submit"  class="btn btn-primary" [disabled]="brandAddForm.invalid">Add Brand!</button>
+</form>

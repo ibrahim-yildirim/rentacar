@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg bg-dark" id="navi">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">Rent A Car</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a *ngIf="isLoggedIn() == true" class="nav-link" href="addcar">Add Car</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a *ngIf="isLoggedIn() == true" class="nav-link" routerLink="detail">Car Details</a>
+          </li> -->
+        </ul>
+        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <!-- <li *ngFor="let color of colors" ><a id="dropdown" href="#" class="list-group-item list-group-item-action"> 
+                  <img src="{{color.logo}}" style="width: 40px; padding-right: 15px;" >{{color.name}} </a>  -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <button *ngIf="isLoggedIn() == true" id="logoutbtn" class="btn btn-outline-success" type="submit" (click)="logOut()">Log Out</button>
+        <button *ngIf="isLoggedIn() == false" id="loginbtn" class="btn btn-outline-success" type="submit" routerLink="login">Login</button>
+
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,51 @@
+a {
+    color: white
+}
+
+/* #dropdown{
+    color: black;
+} */
+
+#navi{
+    border-radius: 0 0 5px 5px;
+}
+
+a:hover{
+    color: wheat;
+}
+
+a:focus{
+    color: chocolate;
+}
+#loginbtn{
+    color: white;
+    border-color: white;
+    width: 80px;
+    height: 40px;
+}
+
+#loginbtn:hover{
+    background-color: wheat;
+}
+
+#loginbtn:active{
+    background-color: chocolate;
+}
+
+#logoutbtn{
+    color: white;
+    border-color: white;
+    margin: 5px;
+    width: 100px;
+    height: 40px;
+}
+
+#logoutbtn:hover{
+    background-color: wheat;
+}
+
+#logoutbtn:active{
+    background-color: chocolate;
+}
+
+

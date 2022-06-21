@@ -1,0 +1,279 @@
+<div class="card" style="width: 18rem; margin-top: 25px;" *ngFor="let car of cars">
+  <img src="https://teknosafari.net/wp-content/uploads/2020/03/bmw-i8.jpg" class="card-img-top" alt="...">
+  <div class="card-body" >
+    <h5 class="card-text">{{car.brandName}} Details</h5>
+    <p class="card-text">{{car.description}}</p>
+    <p class="card-text">{{car.dailyPrice | currency }}</p>
+  </div>
+</div>
+
+
+<div class="form_wrap">
+  <div class="form_wrap-caption" style="position: relative">
+    <h3 style="margin-bottom: 20px; margin-top: 25px;" >Kişisel Bilgiler</h3>
+  </div>
+  <div class="form_wrap-content" style="border: solid black 2px; border-radius: 10px; padding: 20px;" >
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="" class="form-label">İsim*</label>
+          <input
+            oninput="this.value=this.value.turkishToUpper()"
+            class="reservationFormItem form-control BillingInformationupparcase BillingInformationupparcaseFirstName"
+            autocomplete="off"
+            required=""
+            name="FirstName"
+          />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="" class="form-label">Soyisim*</label>
+          <input
+            oninput="this.value=this.value.turkishToUpper()"
+            class="reservationFormItem form-control BillingInformationupparcase BillingInformationupparcaseLastName"
+            autocomplete="off"
+            required=""
+            name="LastName"
+          />
+        </div>
+        <div>
+            
+        <div>
+
+            <a
+              id="loginModalBtn"
+              modal-target="modal-login"
+              style="display: none"
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="" class="form-label">Ehliyet Alış Tarihi*</label>
+      <input
+        name="DrivingLicenseTakingDateSelect"
+        id="DrivingLicenseTakingDateSelect"
+        class="form-control datepicker reservationFormItem hasDatepicker"
+        placeholder="GG/AA/YYYY"
+        value=" 01/01/0001"
+        autocomplete="off"
+        required=""
+        maxlength="10"
+      />
+      <input
+        type="hidden"
+        id="DrivingLicenseTakingDate"
+        required=""
+        name="DrivingLicenseTakingDate"
+      />
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="" class="form-label">Kimlik Bilgisi*</label>
+          <select
+            class="form-control Nationality reservationFormItem"
+            required=""
+            name="Nationality"
+          >
+            <option value="">Seçiniz</option>
+            <option value="T.C." selected="">TC Kimlik No</option>
+            <option value="Yabancı">Pasaport No</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="" class="form-label NationalityName">TC Kimlik No*</label>
+          <input
+            type="number"
+            class="form-control NationalityNameinput mask_TCKN reservationFormItem"
+            autocomplete="off"
+            data-parsley-checktckn="TCKN hatalı. Lütfen girilen değeri kontrol ediniz."
+            required=""
+            data-parsley-required=""
+            name="TCKN"
+            data-parsley-trigger="focusout"
+            data-parsley-trigger-after-failure="focusout"
+            maxlength="11"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="" class="form-label">Ülke*</label>
+      <select
+        class="form-control Country reservationFormItem"
+        id="Country"
+        name="Country"
+      >
+        <option value="">Seçiniz</option>
+        <option value="7e4f1445-1670-10d6-ae82-39fa5b0427b7">ABD</option>
+        <option value="0e4d383c-d651-39a8-e592-39fa5b03ed09">ALMANYA</option>
+        <option value="8da6a4df-15db-29d6-7ff7-39fa5b04b73b">AVUSTRALYA</option>
+        <option value="0024ad92-2e85-6ca3-fca7-39fa5b04ef2d">AVUSTURYA</option>
+        <option value="1eaca059-ca00-849d-42dd-39fa5b052424">AZERBAYCAN</option>
+        <option value="fa1f306b-7034-b050-c26e-39fa5b0553f6">BELÇİKA</option>
+        <option value="fc6ad0d7-92c6-4d0d-a0a2-39fa5b06e4f4">BREZİLYA</option>
+        <option value="ca079bfb-c93e-1a39-7383-39fa5b070688">
+          BULGARİSTAN
+        </option>
+        <option value="b16d223b-e01e-d939-3bb2-39fa5b075897">DANİMARKA</option>
+        <option value="bd744a26-08b4-ac1a-81f3-39fa5b0f28ab">DİĞER</option>
+        <option value="4e582620-198b-82a4-c5fe-39fa5b07935b">FAS</option>
+        <option value="ed374362-b724-41d5-4f40-39fa5b07c410">FRANSA</option>
+        <option value="b45c6a29-054d-11e5-3622-39fa5b0804aa">GÜRCİSTAN</option>
+        <option value="e2a05bc2-32ac-6e6a-efca-39fa5b08387c">HOLLANDA</option>
+        <option value="84a884ad-3b92-a7f9-e628-39fa5b08716e">IRAK</option>
+        <option value="dae93208-c1be-ca57-b37b-39fa5b089f98">İNGİLTERE</option>
+        <option value="52150cef-8651-b078-4cde-39fa5b0996f1">İRAN</option>
+        <option value="6f8712cf-0dec-14bd-66ef-39fa5b09c1cc">İSPANYA</option>
+        <option value="c074431e-16ea-5809-848f-39fa5b09f979">İSVEÇ</option>
+        <option value="de05b569-8824-ad6f-7932-39fa5b0a1a4c">İSVİÇRE</option>
+        <option value="b13a6128-7c0c-1d42-5e95-39fa5b0a4583">İTALYA</option>
+        <option value="f2e3c7a2-d7e9-3229-296c-39fa5b0a8edd">KANADA</option>
+        <option value="8ffd529f-58ef-7fd8-f66c-39fa5b0ab71c">KARADAĞ</option>
+        <option value="28d61774-c79a-ee97-6606-39fa5b0ad0ea">KATAR</option>
+        <option value="238f7b61-087c-9996-6338-39fa5b0b124f">KIBRIS</option>
+        <option value="e2f9d1f7-4cef-7539-f66b-39fa5b0b9302">MAKEDONYA</option>
+        <option value="c7eb9c8c-0a40-d428-1cc6-39fa5b0bd57c">NORVEÇ</option>
+        <option value="c3d95ae5-1bf1-e04f-75fd-39fa5b0c2a85">POLONYA</option>
+        <option value="9686fb94-56ea-c03d-a3b4-39fa5b0c48a0">ROMANYA</option>
+        <option value="fe9d0e7f-0981-65f1-a31e-39fa5b0c7692">RUSYA</option>
+        <option value="7e118873-3a3c-805a-e7c5-39fa5b0ceebb">SURİYE</option>
+        <option value="df6f8a3d-e683-04d3-44f8-39fa5b0d4ade">
+          SUUDİ ARABİSTAN
+        </option>
+        <option value="676f9ac7-f669-490a-9cc0-cedf15fbc0c0" selected="">
+          TÜRKİYE
+        </option>
+        <option value="04324bac-b701-40ec-6b4e-39fa5b0d92a7">UKRAYNA</option>
+        <option value="a416ea2f-9441-957f-e389-39fa5b0ddc78">YUNANİSTAN</option>
+      </select>
+      <input type="hidden" name="Country" />
+    </div>
+    <div class="form-group">
+      <label for="" class="form-label">Şehir*</label>
+      <select
+        class="form-control citySelect reservationFormItem"
+        id="City"
+        data-cityid=""
+        required="required"
+      >
+        <option value="">Seçiniz</option>
+        <option value="07be7efd-0646-cbc9-cdaf-39f40bdd396c">İstanbul</option>
+        <option value="1ea0b257-d530-fc5a-bca7-39f40bdd7af5">Ankara</option>
+        <option value="13b70348-4ce8-385b-9152-39f40bdd9f5b">İzmir</option>
+        <option value="9dc2bcdb-829c-f973-3d00-39f48f27d6bb">Adana</option>
+        <option value="b675365f-eb83-6588-4c34-39ff8bb89271">Adıyaman</option>
+        <option value="c9a8215f-8a74-4810-3986-39fa943eefff">Afyon</option>
+        <option value="b233f26a-7737-3e0e-a689-39ff8bbccb5b">Ağrı</option>
+        <option value="b3eb6617-50b8-a167-a15c-39ff8bfe1d7c">Aksaray</option>
+        <option value="9846b4fb-7129-70c7-429f-39fa943c23d2">Amasya</option>
+        <option value="a4d1d207-1377-1f5f-d577-39f466a138dc">Antalya</option>
+        <option value="c1901efd-3966-7e73-6374-39ff8c05a587">Ardahan</option>
+        <option value="9b30b872-f24a-5ee9-97ed-39ff8bc092eb">Artvin</option>
+        <option value="6b0de044-656e-3cb9-4301-39f48f288262">Aydın</option>
+        <option value="a1ee544a-3087-c434-0371-39fa943fb643">Balıkesir</option>
+        <option value="b0d7447b-b08d-0058-0112-39ff8c052c96">Bartın</option>
+        <option value="d56799f2-57f2-cc2a-ec9a-39f48f28b2db">Batman</option>
+        <option value="64e026b4-264e-6e4b-62b1-39ff8c00a10e">Bayburt</option>
+        <option value="d4abcacc-011c-6f3d-f093-39ff8bc4d83b">Bilecik</option>
+        <option value="a20b6b10-e4d1-53e7-b5ca-39ff8bc7d357">Bingöl</option>
+        <option value="6ead79bc-0200-b4e2-d98b-39ff8be7b499">Bitlis</option>
+        <option value="7c9f96d5-aba4-643a-97a9-39ff8be84154">Bolu</option>
+        <option value="d1d3fe9e-8234-5927-adbd-39ff8c0f6cf7">Burdur</option>
+        <option value="5124826c-ca7c-91e1-c546-39f48f28d75e">Bursa</option>
+        <option value="be4c3ea0-c659-87e1-f1ec-39ff8be9569b">Çanakkale</option>
+        <option value="d70d7a84-bf1a-b8be-464b-39ff8bea172e">Çankırı</option>
+        <option value="c8a60b93-15c7-ccfa-e9a0-39fa9440542a">Çorum</option>
+        <option value="76f85e87-6d58-bad9-c010-39f48f290ae9">Denizli</option>
+        <option value="2cd97cc7-379c-862a-5bbc-39f48f2931aa">Diyarbakır</option>
+        <option value="16a0f48d-ba1d-e11d-b7e7-39ff8c0a4649">Düzce</option>
+        <option value="a6af8745-2c51-15d6-08a4-39ff8beb2e59">Edirne</option>
+        <option value="22255fae-1973-cb01-2ac2-39f48f29688e">Elazığ</option>
+        <option value="1f85f596-d51b-2dc8-a609-39fa94413b60">Erzincan</option>
+        <option value="d84c3278-636b-acb5-890a-39f48f29ed34">Erzurum</option>
+        <option value="c4e47e86-d364-5f2e-69ff-39f48f2a2f22">Eskişehir</option>
+        <option value="98e9ffbf-81ac-fff8-31f3-39f48f2a4fe8">Gaziantep</option>
+        <option value="1d1be3b8-c549-477c-27ea-39ff8bed1eea">Giresun</option>
+        <option value="5d9b273a-d251-21a5-0a7d-39ff8bede494">Gümüşhane</option>
+        <option value="00e7fd57-04fc-b5d1-a76f-39ff8bee6910">Hakkari</option>
+        <option value="71ab49a5-4ae7-022c-76d9-39fa94432f2d">Hatay</option>
+        <option value="f462ac24-a889-a0e5-9f37-39ff8c06d09d">Iğdır</option>
+        <option value="ef03a892-e74e-85d5-63fc-39ff8befc885">Isparta</option>
+        <option value="ef9b196b-a0a4-6002-49b8-39f48f2a9cb3">
+          Kahramanmaraş
+        </option>
+        <option value="97e19fe3-3d63-73d2-1a1f-39ff8c07ebea">Karabük</option>
+        <option value="edbde075-1e68-8973-d6dc-39ff8c0232af">Karaman</option>
+        <option value="1e72ed09-4e05-8c7e-c9ca-39ff8bf0b74d">Kars</option>
+        <option value="0613f77c-0b77-56e7-f68d-39ff8bf23c54">Kastamonu</option>
+        <option value="a43dd610-71df-30fe-cf97-39f48f2ab92e">Kayseri</option>
+        <option value="880d3b24-0595-e947-5dce-39ff8c08785c">Kilis</option>
+        <option value="9f0f0bb1-15dd-a532-e96d-39ff8c02da17">Kırıkkale</option>
+        <option value="bd1f6d80-06da-a7f8-c4f8-39ff8bf2f860">Kırklareli</option>
+        <option value="bfd024ff-9c99-6400-4777-39ff8bf500f8">Kırşehir</option>
+        <option value="cfc086d8-620e-3a4d-8e37-39fa9443c572">Kocaeli</option>
+        <option value="5b4eb2dd-79de-2318-524e-39f48f2ad5f7">Konya</option>
+        <option value="4115ca19-abc6-9bf1-8b54-39fa94447c91">Kütahya</option>
+        <option value="edf56e8c-29cb-c5d7-0f38-39f48f2b08d2">Malatya</option>
+        <option value="9f6b43e7-e28d-91f0-d106-39fc256f2bc6">Manisa</option>
+        <option value="c9c79454-6348-492e-c046-39f48f2b2277">Mardin</option>
+        <option value="247090c3-f9b0-18f1-1730-39ff8bf579eb">Mersin</option>
+        <option value="9959e650-d595-0958-c171-39f466a0c032">Muğla</option>
+        <option value="d26c8eb0-a164-1b5b-7a04-39fb6bac8dd8">Muş</option>
+        <option value="121362b8-1c51-01f5-89ad-39f48f2b47e3">Nevşehir</option>
+        <option value="82bc7454-866c-3a2f-bd8a-39ff8bf7dbb5">Niğde</option>
+        <option value="2518304a-7fdd-5103-226d-39ff8bf89cf1">Ordu</option>
+        <option value="8045bc10-07ba-bee1-5d27-39ff8c09a6f8">Osmaniye</option>
+        <option value="c35fa1c7-2f4d-9204-d97d-39ff8bf908d6">Rize</option>
+        <option value="eb593b62-10ff-d296-5b6a-39f48f2b7b46">Sakarya</option>
+        <option value="5c71b430-1ce0-d6c6-3fc4-39f466a10589">Samsun</option>
+        <option value="61d5c1c7-c500-ea46-0080-39f48f2bc8d4">Şanlıurfa</option>
+        <option value="0a5bc925-5170-e29b-c3e7-39ff8bf9b367">Siirt</option>
+        <option value="ddf1c573-57ed-130c-5d67-39fa9445008d">Sinop</option>
+        <option value="e09bd03c-6804-5d90-e14b-39f48f2ba8e4">Sivas</option>
+        <option value="a403c952-8141-8c02-5156-39ff8c0484a3">Şırnak</option>
+        <option value="e640e63c-93a0-fcb9-6f78-39ff1fcb74a9">Tekirdağ</option>
+        <option value="7c73dd8c-e48c-1ae9-1d9c-39ff8bfa6fd2">Tokat</option>
+        <option value="266a5fe1-1280-af4b-19dc-39f4669ffa2b">Trabzon</option>
+        <option value="5906cdc2-dbb3-ff61-d264-39ff8bfbbbdd">Tunceli</option>
+        <option value="21596b6c-5b58-a6b8-869b-39ff8bfd35c4">Uşak</option>
+        <option value="6392eea5-df39-536a-28fa-39f48f2c1076">Van</option>
+        <option value="19a54ba3-3e26-4b71-98f0-39f48f2c3f64">Yalova</option>
+        <option value="7741c491-3cc2-3ea9-6623-39ff8b28b031">Yozgat</option>
+        <option value="b4816471-104d-25ff-1501-39ff8b21f9ca">Zonguldak</option>
+      </select>
+      <input type="hidden" name="City" id="selectedCityId" />
+      <input
+        name="CityName"
+        id="CityName"
+        class="reservationFormItem form-control cityInput"
+        style="display: none"
+        autocomplete="off"
+      />
+    </div>
+    <div class="form-group">
+      <label for="" class="form-label">Address*</label>
+      <textarea
+        class="form-control form-control-textarea reservationFormItem"
+        maxlength="140"
+        name="Address"
+        required=""
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="" class="form-label">Billing Address*</label>
+        <textarea
+          class="form-control form-control-textarea reservationFormItem"
+          maxlength="140"
+          name="Address"
+          required=""
+        ></textarea>
+      </div>
+  </div>
+</div>

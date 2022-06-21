@@ -1,0 +1,11 @@
+<br>
+<div class="list-group">
+    <a class="list-group-item list-group-item-action disabled" style="background-color: rgb(0, 0, 0); color:aliceblue;">Brand</a>
+    <div *ngFor="let brand of brands" >
+        <a class="list-group-item list-group-item-action"  >
+            <img routerLink="cars/{{brand.id}}" src="{{brand.logo}}" style="width: 40px; padding-right: 15px;" >{{brand.name}} 
+                <button *ngIf="isLoggedIn() == true" id="btn1" type="button" class="btn btn-info" routerLink ="updatebrand/{{brand.id}}">Update</button>
+                <button *ngIf="isLoggedIn() == true" id="btn2" (click)="deleteBrand(brand.id)" type="button" class="btn btn-danger">Delete</button> </a>      
+    </div>
+    <button *ngIf="isLoggedIn() == true" id="addbtn" type="button" class="btn btn-success" routerLink ="addbrand">Add Brand</button>
+</div>

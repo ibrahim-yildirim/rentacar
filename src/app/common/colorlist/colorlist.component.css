@@ -1,0 +1,39 @@
+button {
+    background-color: black;
+}
+
+a:hover{
+    background-color: wheat;
+    font-size: 18px;
+    border-width: 2px;
+    border-color: rgb(167, 167, 167);
+}
+
+a:active{
+    background-color: chocolate;
+}
+
+#btn1{
+    width: 70px;
+    position:relative;
+    float: right;
+    font-size: 12px;
+    padding: 3px;
+    color: whitesmoke;
+    border-color: black;
+    margin-left: 2px;
+    
+}
+
+#btn2{
+    width: 70px;
+    position: relative;
+    float: right;
+    font-size: 12px;
+    padding: 3px;
+    border-color: black;
+}
+
+#addcolor{
+    border-radius: 0 0 5px 5px;
+}

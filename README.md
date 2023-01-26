@@ -10,7 +10,7 @@ Angular Projesi
 ## Features
 
 > Ekleme, silme ve güncelleme işlemleri yapıldı
-> Login ve admin login girişleri ve yetkileri yapıldı
+> Login ve admin girişleri, yetkileri yapıldı
 > Api'den veriler çekildi
 > Arabalar listelendi
 
